@@ -1,0 +1,34 @@
+﻿Salesforce is a customer relationship management (CRM) platform that helps businesses manage their sales, marketing, customer service, and other critical functions. It provides a suite of cloud-based applications and services.
+
+The cloud refers to a network of servers, storage devices, applications, and services that are accessed over the internet.
+
+Amazon EC2 is a cloud computing service provided by Amazon Web Services (AWS) that allows users to rent virtual servers in the cloud. It offers flexible and scalable computing resources, various pricing options, high availability, security features, integration with other AWS services, and management tools for easy instance management and monitoring. It is widely used for running applications, hosting websites, processing data, and more.
+
+APEX PROGRAMMING
+
+LOGIN -> NEW CUSTOM OBJECT -> FIELD AND RELATIONSHIP -> APEX CLASSES ->TRRIGGER -> CUSTOM TABS
+
+Apex Classes:
+
+public class MyHelloWorld{
+   public static void applyDiscount(cake__c[] cakes){
+        for(cake__c c:cakes){
+            c.Price__c*=0.9;
+        }
+   }
+}
+
+
+TRIGGER:
+
+trigger MHelloWorldTrigger on cake__c(before insert){
+    cake__c[] cakes = Trigger.new;
+    MyHelloWorld.applyDiscount(cakes);
+}
+
+ —————————————————————————————————————————————
+
+
+CUSTOM APP
+
+CUSTOM OBJECT -> TAB -> APP MANAGER -> 
